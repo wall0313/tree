@@ -67,7 +67,7 @@ export function updateCheckState(obj, checkedPosition, checkIt) {
 
     let checkedChildrenCount = 0;
     parentObj.childrenPos.forEach(childPos => {
-      if (obj[childPos].disableCheckbox) {
+      if (obj[childPos].disableCheckbox || obj[childPos].disabled) {
         childrenCount -= 1;
       }
       if (obj[childPos].checked === true) checkedChildrenCount++;
